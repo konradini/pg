@@ -121,32 +121,17 @@ body {
 		
 #stopka {
 
-	width: 85%;
+	width: 100%;
 	margin: 10px auto 10px;
 	
 	
 	
 }
 
-#stopka ul {
-
-	list-style: none;
-	padding: 10px 0px 0px;
-	margin-left: 185px;
-}
-
-#stopka li {
-	display: inline;
-	float: left;
-	margin: 0px 0px 0px;
-	
-}
-
 #stopka h1 {
 	background-color: #4A4A4A;
 	font-size: 14px;
-	width: 940px;
-	padding: 6px 0px 7px;
+	width: 100%
 	margin: 0px 0px;
 	text-align: center;
 }
