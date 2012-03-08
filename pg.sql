@@ -44,7 +44,7 @@ DROP TABLE IF EXISTS `ticket`;
 CREATE TABLE IF NOT EXISTS `ticket` (
   `id_t` int(11) NOT NULL AUTO_INCREMENT,
   `ip` varchar(20) COLLATE utf8_polish_ci DEFAULT NULL,
-  `status` enum('przyjeto zgłoszenie','oczekujacy','w trakcie realizacji','wyslany do serwisu','zakonczony','anulowany') COLLATE utf8_polish_ci DEFAULT NULL,
+  `status` enum('przyjeto zgloszenie','oczekujacy','w trakcie realizacji','wyslany do serwisu','zakonczony','anulowany') COLLATE utf8_polish_ci DEFAULT NULL,
   `kategoria` enum('problem z komputerem w sali','awaria komputera pracownika','inne','awaria sieci') COLLATE utf8_polish_ci DEFAULT NULL,
   `data_przy` timestamp NULL DEFAULT NULL,
   `data_real` timestamp NULL DEFAULT NULL,
