@@ -64,7 +64,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(20) COLLATE utf8_polish_ci NOT NULL,
-  `pass` varchar(30) COLLATE utf8_polish_ci NOT NULL,
+  `pass` varchar(50) COLLATE utf8_polish_ci NOT NULL,
   `klasa` enum('admin','user') COLLATE utf8_polish_ci NOT NULL,
   `imie` varchar(20) COLLATE utf8_polish_ci DEFAULT NULL,
   `nazwisko` varchar(50) COLLATE utf8_polish_ci DEFAULT NULL,
