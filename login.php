@@ -30,15 +30,15 @@
                                             echo "<td>Zalogowano jako " .$login. "</td>";
                                             echo "<td><a href='logout.php'>[ wyloguj ]</a></td>";
                                         }
-	if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
-            echo '<td>'; 
-		foreach ($_SESSION['ERRMSG_ARR'] as $msg){
-                    echo '<li>' . $msg . '</li>';
-                    }
-                echo '</td>';
-		unset($_SESSION['ERRMSG_ARR']);
-		}
-                ?>
+                                        if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+                                            echo '<td>'; 
+                                            foreach ($_SESSION['ERRMSG_ARR'] as $msg){
+                                            echo '<li>' . $msg . '</li>';
+                                        }
+                                        echo '</td>';
+                                        unset($_SESSION['ERRMSG_ARR']);
+                                        }
+                                    ?>
                             </tr></table>
                         </form>
                         </div>
