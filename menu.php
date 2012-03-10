@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -18,9 +18,9 @@
                 <li>
                     <h2>Menu</h2>
                     <ul>
-                        <li><a href="#">Przegl康aj zg這szenia</a></li>
-                        <li><a href="#">Dodaj zg這szenie</a></li>
-                        <li><a href="#">Zarz康zaj zg這szeniami</a></li>
+                        <li><a href="przeglad.php" target="index">Przegl康aj zg這szenia</a></li>
+                        <li><a href="dodaj.php" target="index">Dodaj zg這szenie</a></li>
+                        <li><a href="zarzadzaj.php" target="index">Zarz康zaj zg這szeniami</a></li>
                     </ul>
                 </li>
             </ul>

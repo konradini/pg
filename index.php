@@ -11,7 +11,7 @@
         <frame src="login.php" frameborder="0" noresize="noresize" />
         
         <frameset cols="80%,20%">
-            <frame src="index_1.php" frameborder="0" noresize="noresize" />
+            <frame src="index_1.php" name="index" frameborder="0" noresize="noresize" />
             <frame src="menu.php"  frameborder="0" noresize="noresize" />
         </frameset>
     </frameset>
