@@ -63,7 +63,7 @@ a:hover {
 }
 
 #header {
-	width: 950px;
+	width: 850px;
 	margin: 0 auto;
 	padding: 0px 0px 0px 30px;
 }
@@ -187,7 +187,7 @@ a:hover {
 /* Page */
 
 #page {
-	width: 980px;
+	width: 680px;
 	margin: 0 auto;
 	padding: 0px 0px 0px 0px;
 }
@@ -255,10 +255,10 @@ a:hover {
 /* Sidebar */
 
 #sidebar {
-	float: right;
-	width: 280px;
+	float: left;
+	width: 200px;
 	margin: 0px;
-	padding: 0px 20px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	color: #787878;
 }
 

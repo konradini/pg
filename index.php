@@ -7,8 +7,12 @@
         <title>Ticket System</title>
         <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
     </head>
-    <frameset rows="35,*">
+    <frameset rows="5.5%,94.5%">
         <frame src="login.php" frameborder="0" noresize="noresize" />
-        <frame src="index_1.php" frameborder="0" noresize="noresize" />
+        
+        <frameset cols="80%,20%">
+            <frame src="index_1.php" frameborder="0" noresize="noresize" />
+            <frame src="menu.php"  frameborder="0" noresize="noresize" />
+        </frameset>
     </frameset>
 </html>

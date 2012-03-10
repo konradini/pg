@@ -27,7 +27,7 @@
                                                 <td>Has³o:<input type="password" name="pass"></input></td>
                                                 <td><input type="submit" value="OK"></input></td>';
                                         }else{
-                                            echo "<td>Zalogowano jako " .$login. "</td>";
+                                            echo "<td>Zalogowano jako <b>" .$login. "</b></td>";
                                             echo "<td><a href='logout.php'>[ wyloguj ]</a></td>";
                                         }
                                         if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
