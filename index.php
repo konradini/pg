@@ -33,7 +33,7 @@ Released   : 20100110
                     <div id="logo">
                         <div style="color: white;">
                         <form action="exec/login-exec.php" method="get">
-                            <table><tr><td>
+                            <table><tr>
                                     <?php
                                         if(!isset($login)){
                                             echo '<td>Login:<input type="text" name="login"></input></td>
@@ -52,7 +52,7 @@ Released   : 20100110
                                         unset($_SESSION['ERRMSG_ARR']);
                                         }
                                     ?>
-                            </td></tr></table>
+                            </tr></table>
                         </form>
                         </div>
                     </div>
