@@ -118,6 +118,7 @@ Released   : 20100110
                                 <tr><td><input name="usid" type="hidden" value="<?php if(isset($id)) echo $id; ?>"></input></td></tr>
                             </table>
                         </form>
+                        <div style="color: black">
                             <?php
                                 if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
                                     foreach ($_SESSION['ERRMSG_ARR'] as $msg){
@@ -126,6 +127,7 @@ Released   : 20100110
                                     unset($_SESSION['ERRMSG_ARR']);
                                 }
                             ?>
+                        </div>
                     </div>
                 </div>
             </div>
