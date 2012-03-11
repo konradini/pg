@@ -8,15 +8,13 @@
     unset($_SESSION['klasa']);
     unset($_SESSION['email']);
     unset($_SESSION['pokoj']);
-    $ref=$_GET['ref'];
-    
     $errmsg_arr=array();
     
     $errmsg_arr[] = "Wylogowano!";
     
     $_SESSION['ERRMSG_ARR'] = $errmsg_arr;
     session_write_close();
-    header("location: $ref");
+    header("location: index.php");
     echo "<script language = 'javascript'>parent.frames.menu2.location.reload()</script>";
     exit();
 ?>
