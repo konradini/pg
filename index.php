@@ -16,6 +16,7 @@ Released   : 20100110
         $login=$_SESSION['login'];
         $klasa=$_SESSION['klasa'];
      }
+     $ref=$_SERVER['PHP_SELF'];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -36,9 +37,10 @@ Released   : 20100110
                             <table><tr>
                                     <?php
                                         if(!isset($login)){
-                                            echo '<td>Login:<input type="text" name="login"></input></td>
-                                                <td>Has³o:<input type="password" name="pass"></input></td>
-                                                <td><input type="submit" value="OK"></input></td>';
+                                            echo "<td>Login:<input type='text' name='login'></input></td>
+                                                <td>Has³o:<input type='password' name='pass'></input></td>
+                                                <td><input type='hidden' value='$ref' name='ref'></input></td>
+                                                <td><input type='submit' value='OK'></input></td>";
                                         }else{
                                             echo "<td>Zalogowano jako <b>" .$login. "</b></td>";
                                             echo "<td><a href='logout.php'>[ wyloguj ]</a></td>";

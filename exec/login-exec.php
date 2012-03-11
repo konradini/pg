@@ -6,6 +6,7 @@
             
             $login = $_GET['login'];
             $pass = $_GET['pass'];
+            $ref=$_GET['ref'];
             
             if($login == '') {
 		$errmsg_arr[] = 'Brak loginu';
@@ -16,7 +17,7 @@
             if($errmsg_arr) {
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 		session_write_close();
-		header("location: ../index.php");
+		header("location: $ref");
 		exit();
             }
             
@@ -40,14 +41,14 @@
                     $_SESSION['email']=$member['email'];
                     $_SESSION['pokoj']=$member['pokoj'];
                     
-                    header('location: ../index.php');
+                    header("location: $ref");
                 }
             }
             
             if($errmsg_arr) {
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 		session_write_close();
-		header("location: ../index.php");
+		header("location: $ref");
 		exit();
             }
 ?>
