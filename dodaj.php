@@ -45,7 +45,7 @@ Released   : 20100110
                                             echo "<td>Zalogowano jako <b>" .$login. "</b></td>";
                                             echo "<td><a href='logout.php'>[ wyloguj ]</a></td>";
                                         }
-                                        if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+                                        if(!isset($login) && isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
                                             echo '<td>'; 
                                             foreach ($_SESSION['ERRMSG_ARR'] as $msg){
                                             echo '<li>' . $msg . '</li>';
@@ -77,7 +77,7 @@ Released   : 20100110
                         <li><a href="zarzadzaj.php">Zarz±dzaj zg³oszeniami</a></li>
                         <?php
                             if(isset($login) && $klasa=='admin'){
-                                echo "<li><a href='register.php' target='index'>Dodaj u¿ytkownika</a></li>";
+                                echo "<li><a href='register.php'>Dodaj u¿ytkownika</a></li>";
                             }
                         ?>
                     </ul>
@@ -89,7 +89,6 @@ Released   : 20100110
             <div id="page-bgtop">
                 <div id="page-bgbtm">
                     <div id="content">
-                        <div style="clear: both;">&nbsp;</div>
                         <div style="color: black;">
                         <?php
                             if(!isset($login)){
@@ -97,8 +96,6 @@ Released   : 20100110
                             }
                         ?>
                         </div>
-                        <div style="clear: both;">&nbsp;</div>
-                        <div style="clear: both;">&nbsp;</div>
                         <form action="exec/dodaj.php" method="get">
                             <table>
                                 <tr><td><div style="color: black;">Pokój/sala:</div></td></tr>

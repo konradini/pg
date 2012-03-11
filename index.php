@@ -75,7 +75,7 @@ Released   : 20100110
                         <li><a href="zarzadzaj.php">Zarz±dzaj zg³oszeniami</a></li>
                         <?php
                             if(isset($login) && $klasa=='admin'){
-                                echo "<li><a href='register.php' target='index'>Dodaj u¿ytkownika</a></li>";
+                                echo "<li><a href='register.php'>Dodaj u¿ytkownika</a></li>";
                             }
                         ?>
                     </ul>
