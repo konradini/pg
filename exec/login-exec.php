@@ -16,7 +16,7 @@
             if($errmsg_arr) {
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 		session_write_close();
-		header("location: ../login.php");
+		header("location: ../index.php");
 		exit();
             }
             
@@ -40,14 +40,14 @@
                     $_SESSION['email']=$member['email'];
                     $_SESSION['pokoj']=$member['pokoj'];
                     
-                    header('location: ../login.php');
+                    header('location: ../index.php');
                 }
             }
             
             if($errmsg_arr) {
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 		session_write_close();
-		header("location: ../login.php");
+		header("location: ../index.php");
 		exit();
             }
 ?>

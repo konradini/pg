@@ -14,6 +14,7 @@
     
     $_SESSION['ERRMSG_ARR'] = $errmsg_arr;
     session_write_close();
-    header("location: login.php");
+    header("location: index.php");
+    echo "<script language = 'javascript'>parent.frames.menu2.location.reload()</script>";
     exit();
 ?>

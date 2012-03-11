@@ -9,13 +9,30 @@
         <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
     <body>
+        
+        <div style="clear: both;">&nbsp;</div>
+        <div style="clear: both;">&nbsp;</div>
+        <div id="page">
+                <div id="page-bgtop">
+                    <div id="page-bgbtm">
+                        <div id="content">
         <form action="exec/register.php" method="get">
-            <table><tr>
-                <td>Login:<input type="text" name="login"></input></td>
-                <td>Has³o:<input type="password" name="pass"></input></td>
-                <td><input type="submit" value="OK"></input></td>
-            </tr></table>
+            <table>
+                <tr><td><div style="color: black;">Login:</div></td>
+                <td><input type="text" name="login"></input></td></tr>
+                <tr><td><div style="color: black;">Has³o:</div></td>
+                <td><input type="password" name="pass"></input></td></tr>
+                <tr><td>
+                    <div style="color: black;">Klasa:</div></td>
+                    <td><select name="class">
+                        <option value="admin">Administrator</option>
+                        <option value="user">U¿ytkownik</option>
+                    </select>
+                </td></tr>
+                <tr><td><input type="submit" value="OK"></input></td></tr>
+            </table>
         </form>
+        <div style="color: black;">
         <?php
 	if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
             foreach ($_SESSION['ERRMSG_ARR'] as $msg){
@@ -24,5 +41,10 @@
             unset($_SESSION['ERRMSG_ARR']);
         }
         ?>
+        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
     </body>
 </html>
