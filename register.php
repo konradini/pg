@@ -23,7 +23,7 @@
                     <div id="logo">
                         <div style="color: white;">
                         <form id="form1" action="exec/login-exec.php" method="get">
-                            <table><tr>
+                            <table><tr><td>
                                     <?php
                                         if(!isset($login)){
                                             echo '<td>Login:<input type="text" name="login"></input></td>
@@ -42,7 +42,7 @@
                                         unset($_SESSION['ERRMSG_ARR']);
                                         }
                                     ?>
-                            </tr></table>
+                            </td></tr></table>
                         </form>
                         </div>
                     </div>

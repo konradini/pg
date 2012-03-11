@@ -33,7 +33,7 @@ Released   : 20100110
                     <div id="logo">
                         <div style="color: white;">
                         <form action="exec/login-exec.php" method="get">
-                            <table><tr>
+                            <table><tr><td>
                                     <?php
                                         if(!isset($login)){
                                             echo '<td>Login:<input type="text" name="login"></input></td>
@@ -52,7 +52,7 @@ Released   : 20100110
                                         unset($_SESSION['ERRMSG_ARR']);
                                         }
                                     ?>
-                            </tr></table>
+                            </td></tr></table>
                         </form>
                         </div>
                     </div>
@@ -123,7 +123,7 @@ Released   : 20100110
                 </div>
             </div>
             <!-- end #page -->
-            <div id="footer">
+        <div id="footer">
             <p>Copyright (c) 2008 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
         </div>
     </body>

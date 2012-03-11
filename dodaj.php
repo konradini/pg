@@ -35,7 +35,7 @@ Released   : 20100110
                     <div id="logo">
                         <div style="color: white;">
                         <form action="exec/login-exec.php" method="get">
-                            <table><tr>
+                            <table><tr><td>
                                     <?php
                                         if(!isset($login)){
                                             echo '<td>Login:<input type="text" name="login"></input></td>
@@ -54,7 +54,7 @@ Released   : 20100110
                                         unset($_SESSION['ERRMSG_ARR']);
                                         }
                                     ?>
-                            </tr></table>
+                        </td></tr></table>
                         </form>
                         </div>
                     </div>
@@ -118,7 +118,6 @@ Released   : 20100110
                                 <tr><td><input name="usid" type="hidden" value="<?php if(isset($id)) echo $id; ?>"></input></td></tr>
                             </table>
                         </form>
-                        <table><tr><td>
                             <?php
                                 if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
                                     foreach ($_SESSION['ERRMSG_ARR'] as $msg){
@@ -127,7 +126,6 @@ Released   : 20100110
                                     unset($_SESSION['ERRMSG_ARR']);
                                 }
                             ?>
-                        </td></tr></table>
                     </div>
                 </div>
             </div>
