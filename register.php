@@ -1,10 +1,12 @@
 <?php
     session_start();
+    require_once 'auth.php';
     if(isset($_SESSION['login'])){
         $login=$_SESSION['login'];
         $id=$_SESSION['ID'];
         $klasa=$_SESSION['klasa'];
      }
+     $ref=$_SERVER['PHP_SELF'];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,12 +28,13 @@
                             <table><tr>
                                     <?php
                                         if(!isset($login)){
-                                            echo '<td>Login:<input type="text" name="login"></input></td>
-                                                <td>Has³o:<input type="password" name="pass"></input></td>
-                                                <td><input type="submit" value="OK"></input></td>';
+                                            echo "<td>Login:<input type='text' name='login'></input></td>
+                                                <td>Has³o:<input type='password' name='pass'></input></td>
+                                                <td><input type='hidden' value='$ref' name='ref'></input></td>
+                                                <td><input type='submit' value='OK'></input></td>";
                                         }else{
                                             echo "<td>Zalogowano jako <b>" .$login. "</b></td>";
-                                            echo "<td><a href='logout.php'>[ wyloguj ]</a></td>";
+                                            echo "<td><a href='logout.php?ref=$ref'>[ wyloguj ]</a></td>";
                                         }
                                         if(!isset($login) && isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
                                             echo '<td>'; 
