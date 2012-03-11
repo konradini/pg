@@ -45,7 +45,7 @@ Released   : 20100110
                                             echo "<td>Zalogowano jako <b>" .$login. "</b></td>";
                                             echo "<td><a href='logout.php'>[ wyloguj ]</a></td>";
                                         }
-                                        if(!isset($login) && isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+                                        if(isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
                                             echo '<td>'; 
                                             foreach ($_SESSION['ERRMSG_ARR'] as $msg){
                                             echo '<li>' . $msg . '</li>';
@@ -89,7 +89,7 @@ Released   : 20100110
             <div id="page-bgtop">
                 <div id="page-bgbtm">
                     <div id="content">
-                        <div style="color: black;">
+                        <div style="color: red;">
                         <?php
                             if(!isset($login)){
                                 echo "Nie jeste¶ zalogowany, nie bêdziesz mia³ wgl±du do statusu zg³oszenia.";
@@ -120,11 +120,11 @@ Released   : 20100110
                         </form>
                         <div style="color: black">
                             <?php
-                                if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
-                                    foreach ($_SESSION['ERRMSG_ARR'] as $msg){
+                                if( isset($_SESSION['ERRMSG_ADD']) && is_array($_SESSION['ERRMSG_ADD']) && count($_SESSION['ERRMSG_ADD']) >0 ) {
+                                    foreach ($_SESSION['ERRMSG_ADD'] as $msg){
                                         echo '<li>' . $msg . '</li>';
                                     }
-                                    unset($_SESSION['ERRMSG_ARR']);
+                                    unset($_SESSION['ERRMSG_ADD']);
                                 }
                             ?>
                         </div>

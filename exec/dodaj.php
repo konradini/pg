@@ -17,7 +17,7 @@
         $errmsg_arr[]='Nie podano typu usterki!';
     }
     if($errmsg_arr){
-        $_SESSION['ERRMSG_ARR'] = $errmsg_arr;
+        $_SESSION['ERRMSG_ADD'] = $errmsg_arr;
 	session_write_close();
 	header("location: ../dodaj.php");
 	exit();
@@ -27,7 +27,7 @@
         $errmsg_arr[]='Dodano pomy¶lnie';
     }
     if($errmsg_arr){
-        $_SESSION['ERRMSG_ARR'] = $errmsg_arr;
+        $_SESSION['ERRMSG_ADD'] = $errmsg_arr;
 	session_write_close();
 	header("location: ../dodaj.php");
 	exit();
