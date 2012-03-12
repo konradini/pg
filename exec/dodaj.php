@@ -23,8 +23,13 @@
 	exit();
     }else{
         $tmp="insert into ticket(ip,pokoj,kategoria,info,id_zloz) values ('$ip','$pokoj', '$type', '$info','$usid')";
-        mysql_query($tmp);
-        $errmsg_arr[]='Dodano pomy¶lnie';
+        $result=mysql_query($tmp);
+        if($result){
+            $errmsg_arr[]='Dodano pomy¶lnie';
+        }else{
+            $errmsg_arr[]=  mysql_error();
+        }
+        
     }
     if($errmsg_arr){
         $_SESSION['ERRMSG_ADD'] = $errmsg_arr;
