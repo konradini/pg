@@ -1,1 +1,3 @@
-Nothing here
+Kontrolne konto administratora: test / test
+
+Aby system poprawnie działał należy edytować plik config.php z poprawnymi danymi dostępu do bazy
