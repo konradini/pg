@@ -90,10 +90,10 @@ Released   : 20100110
                     <div id="page-bgbtm">
                         <div id="content">
                             <div style="color: black">
-														
                             <?php
                                 if(!isset($login)){
                                     echo "Brak dostêpu! Zaloguj siê";
+																
                                 }
                             ?>
                             </div>
