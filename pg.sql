@@ -72,14 +72,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(40) COLLATE utf8_polish_ci DEFAULT NULL,
   `pokoj` varchar(10) COLLATE utf8_polish_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=3 ;
 
 --
 -- Zrzut danych tabeli `users`
 --
 
 INSERT INTO `users` (`id`, `login`, `pass`, `klasa`, `imie`, `nazwisko`, `email`, `pokoj`) VALUES
-(19, 'test', '098f6bcd4621d373cade4e832627b4f6', 'admin', NULL, NULL, NULL, NULL);
+(2, 'test', '098f6bcd4621d373cade4e832627b4f6', 'admin', NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `login`, `pass`, `klasa`, `imie`, `nazwisko`, `email`, `pokoj`) VALUES
+(1, 'anon', 'anon', 'user', NULL, NULL, NULL, NULL);
 
 --
 -- Ograniczenia dla zrzutów tabel

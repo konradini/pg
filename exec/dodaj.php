@@ -22,6 +22,9 @@
 	header("location: ../dodaj.php");
 	exit();
     }else{
+        if($usid==''){
+            $usid=1;
+        }
         $tmp="insert into ticket(ip,pokoj,kategoria,info,id_zloz) values ('$ip','$pokoj', '$type', '$info','$usid')";
         $result=mysql_query($tmp);
         if($result){
