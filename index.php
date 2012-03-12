@@ -75,6 +75,7 @@ Released   : 20100110
                         <li><a href="przeglad.php">Przegl±daj zg³oszenia</a></li>
                         <li><a href="dodaj.php">Dodaj zg³oszenie</a></li>
                         <li><a href="zarzadzaj.php">Zarz±dzaj zg³oszeniami</a></li>
+												
                         <?php
                             if(isset($login) && $klasa=='admin'){
                                 echo "<li><a href='register.php'>Dodaj u¿ytkownika</a></li>";
@@ -90,31 +91,16 @@ Released   : 20100110
                     <div id="page-bgbtm">
                         <div id="content">
                             <div class="post">
-                                <h2 class="title"><a href="#">Welcome to Wellness³³³  </a></h2>
-                                <p class="meta"><span class="date">January 10, 2010</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
+                                <h2 class="title"><a href="index.php">Witamy w serwisie zg³aszania usterek na wydziale Matematyki i Informatyki UWM  </a></h2><br /><br /><br />
+                                
                                 <div style="clear: both;">&nbsp;</div>
                                 <div class="entry">
-                                    <p>This is <strong>Wellness  </strong>, a free, fully standards-compliant CSS template designed by FreeCssTemplates<a href="http://www.nodethirtythree.com/"></a> for <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.  This free template is released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attributions 2.5</a> license, so you?re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
-                                    <p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum ipsum. Proin imperdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.</p>
-                                    <p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Comments</a></p>
-                                </div>
-                            </div>
-                            <div class="post">
-                                <h2 class="title"><a href="#">Lorem ipsum sed aliquam</a></h2>
-                                <p class="meta"><span class="date">January 10, 2010</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
-                                <div style="clear: both;">&nbsp;</div>
-                                <div class="entry">
-                                    <p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.  Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.</p>
-                                    <p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Comments</a></p>
-                                </div>
-                            </div>
-                            <div class="post">
-                                <h2 class="title"><a href="#">Consecteteur hendrerit </a></h2>
-                                <p class="meta"><span class="date">January 10, 2010</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
-                                <div style="clear: both;">&nbsp;</div>
-                                <div class="entry">
-                                    <p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.  Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.</p>
-                                    <p class="links"><a href="#">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Comments</a></p>
+                                    <p>
+																		Ten serwis internetowy jest przeznaczony do zg³aszania usterek sprzêtowych, wszelkich awarii oprogramowania, okablowania, po³±czeñ sieciowych (kablowych oraz bezprzewodowych), rzutników, serwerów oraz wszystkich drobnych usterek. Zg³oszenia s± wysy³ane do adminisratorów, którzy s± odpowiedzialni za sprzêt na wydziale Matematyki i Informatyki Uniwersytetu Warmiñsko-Mazurskiego.
+																		<br />Zg³oszeñ mo¿na dokonywaæ po zalogowaniu, jak równie¿ bez konieczno¶ci logowania.<br />
+																		
+																		</p>
+
                                 </div>
                             </div>
                             <div style="clear: both;">&nbsp;</div>
