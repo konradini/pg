@@ -93,41 +93,36 @@ Released   : 20100110
                             <?php
                                 if(!isset($login))
                                     echo "Brak dostêpu! Zaloguj siê";
-																		
-																	else
-																	{
-																	require_once 'connect.php';
-																	$query="SELECT * FROM ticket ORDER BY id_t ";
-																	$result=mysql_query($query) or die (mysql_error());
-																			echo "<table align=\"center\" border=\"1\" cellpadding=\"2\" cellspacing=\"0\" >";
-																			
-																									echo "<tr >";		
-																									echo "<td>"."Id"."</td>";
-																									echo "<td>"."Status"."</td>";
-																									echo "<td>"."Data Przyj"."</td>";
-																									echo "<td>"."Kategoria"."</td>";
-																									echo "<td>"."Data realizacji"."</td>";
-																									echo "<td>"."Id ticket"."</td>";
-																									echo "<td>"."IP"."</td>";
-																									echo "<td width=\"200px\">"."Info"."</td>";
-																									echo "</tr>";
-																									echo'<br />';
-																			while($row=mysql_fetch_object($result)) {
-																				echo "<tr >";		
-																				echo "<td>".$row->id_t."</td>";
-																				echo "<td>".$row->status."</td>";
-																				echo "<td>".$row->data_przy."</td>";
-																				echo "<td>".$row->kategoria."</td>";
-																				echo "<td>".$row->data_real."</td>";
-																				echo "<td>".$row->id_zloz."</td>";
-																				echo "<td>".$row->ip."</td>";
-																				echo "<td>".$row->info."</td>";
-																				echo "</tr>";
-																				}
-																	echo "</table>"	;
-																	}
-                                
-                            ?>
+				else{
+                                    require_once 'connect.php';
+                                    $query="SELECT * FROM ticket ORDER BY id_t ";
+                                    $result=mysql_query($query) or die (mysql_error());
+                                    echo "<table align=\"center\" border=\"1\" cellpadding=\"2\" cellspacing=\"0\" >";
+                                    echo "<tr >";		
+                                    echo "<td>"."Id"."</td>";
+                                    echo "<td>"."Status"."</td>";
+                                    echo "<td>"."Data Przyj"."</td>";
+                                    echo "<td>"."Kategoria"."</td>";
+                                    echo "<td>"."Data realizacji"."</td>";
+                                    echo "<td>"."Id ticket"."</td>";
+                                    echo "<td>"."IP"."</td>";
+                                    echo "<td width=\"200px\">"."Info"."</td>";
+                                    echo "</tr>";
+                                    echo'<br />';
+                                    while($row=mysql_fetch_object($result)) {
+                                        echo "<tr >";		
+					echo "<td>".$row->id_t."</td>";
+					echo "<td>".$row->status."</td>";
+					echo "<td>".$row->data_przy."</td>";
+					echo "<td>".$row->kategoria."</td>";
+					echo "<td>".$row->data_real."</td>";
+					echo "<td>".$row->id_zloz."</td>";
+					echo "<td>".$row->ip."</td>";
+					echo "<td>".$row->info."</td>";
+					echo "</tr>";
+                                    }
+                                    echo "</table>"	;
+                                }                       ?>
                             </div>
                         </div>
                         <!-- end #content -->
