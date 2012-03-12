@@ -91,7 +91,7 @@ Released   : 20100110
                     <div id="page-bgbtm">
                         <div id="content">
                             <div class="post">
-                                <h2 class="title"><a href="index.php">Witamy w serwisie zg³aszania usterek na wydziale Matematyki i Informatyki UWM  </a></h2><br /><br /><br />
+                                <h2 class="title"><a href="index.php">Witamy w serwisie zg³aszania usterek </a></h2><br /><br /><br />
                                 
                                 <div style="clear: both;">&nbsp;</div>
                                 <div class="entry">
