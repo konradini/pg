@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 11 Mar 2012, 18:39
+-- Czas wygenerowania: 12 Mar 2012, 11:16
 -- Wersja serwera: 5.1.58
 -- Wersja PHP: 5.3.10-2
 
@@ -43,16 +43,17 @@ CREATE TABLE IF NOT EXISTS `relation` (
 DROP TABLE IF EXISTS `ticket`;
 CREATE TABLE IF NOT EXISTS `ticket` (
   `id_t` int(11) NOT NULL AUTO_INCREMENT,
-  `ip` varchar(20) COLLATE utf8_polish_ci DEFAULT NULL,
+  `ip` varchar(20) COLLATE utf8_polish_ci NOT NULL,
   `status` enum('przyjeto','oczekujacy','wtrakcie','serwis','zakonczony','anulowany') COLLATE utf8_polish_ci DEFAULT NULL,
-  `kategoria` enum('kompsala','kompprac','inne','awsiec') COLLATE utf8_polish_ci DEFAULT NULL,
+  `kategoria` enum('kompsala','kompprac','inne','awsiec') COLLATE utf8_polish_ci NOT NULL,
+  `pokoj` varchar(20) COLLATE utf8_polish_ci NOT NULL,
   `data_przy` timestamp NULL DEFAULT NULL,
   `data_real` timestamp NULL DEFAULT NULL,
   `id_zloz` int(11) DEFAULT NULL,
   `info` text COLLATE utf8_polish_ci,
   PRIMARY KEY (`id_t`),
   KEY `id_zloz` (`id_zloz`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=7 ;
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(40) COLLATE utf8_polish_ci DEFAULT NULL,
   `pokoj` varchar(10) COLLATE utf8_polish_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=20 ;
+
+--
+-- Zrzut danych tabeli `users`
+--
+
+INSERT INTO `users` (`id`, `login`, `pass`, `klasa`, `imie`, `nazwisko`, `email`, `pokoj`) VALUES
+(19, 'test', '098f6bcd4621d373cade4e832627b4f6', 'admin', NULL, NULL, NULL, NULL);
 
 --
 -- Ograniczenia dla zrzutów tabel
