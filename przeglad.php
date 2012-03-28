@@ -15,6 +15,7 @@ Released   : 20100110
      if(isset($_SESSION['login'])){
         $login=$_SESSION['login'];
         $klasa=$_SESSION['klasa'];
+        $id=$_SESSION['ID'];
      }
      $ref=$_SERVER['PHP_SELF'];
 ?>
@@ -95,7 +96,7 @@ Released   : 20100110
                                     echo "Brak dostêpu! Zaloguj siê";
 				else{
                                     require_once 'connect.php';
-                                    $query="SELECT * FROM ticket inner join users on ticket.id_zloz=users.id ORDER BY id_t ";
+                                    $query="SELECT * FROM ticket inner join users on ticket.id_zloz=users.id where users.id=$id ORDER BY id_t ";
                                     $result=mysql_query($query) or die (mysql_error());
                                     echo "<table align=\"center\" border=\"1\" cellpadding=\"2\" cellspacing=\"0\" >";
                                     echo "<tr >";		
