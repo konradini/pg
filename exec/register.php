@@ -7,6 +7,7 @@
     $login=$_GET['login'];
     $pass=$_GET['pass'];
     $klasa=$_GET['class'];
+		$nazwisko=$_GET['nazwisko'];
     
     if($login==''){
         $errmsg_arr[]='Brak loginu!';
@@ -25,7 +26,7 @@
         if(mysql_num_rows($result)>0){
             $errmsg_arr[]='Login zajêty!';
         }else{
-            $tmp="insert into users (login,pass,klasa) values ('$login','".md5($pass)."','$klasa')";
+            $tmp="insert into users (login,pass,klasa,nazwisko) values ('$login','".md5($pass)."','$klasa','$nazwisko')";
             $result=mysql_query($tmp);
             $errmsg_arr[]='Zarejestrowano pomy¶lnie';
         }

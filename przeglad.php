@@ -74,10 +74,10 @@ Released   : 20100110
                         <li><a href="index.php">Home</a></li>
                         <li><a href="przeglad.php">Przegl±daj zg³oszenia</a></li>
                         <li><a href="dodaj.php">Dodaj zg³oszenie</a></li>
-                        <li><a href="zarzadzaj.php">Zarz±dzaj zg³oszeniami</a></li>
                         <?php
                             if(isset($login) && $klasa=='admin'){
                                 echo "<li><a href='register.php'>Dodaj u¿ytkownika</a></li>";
+																echo "<li><a href='zarzadzaj.php'>Zarz±dzaj zg³oszeniami</a></li>";
                             }
                         ?>
                     </ul>
@@ -95,7 +95,7 @@ Released   : 20100110
                                     echo "Brak dostêpu! Zaloguj siê";
 				else{
                                     require_once 'connect.php';
-                                    $query="SELECT * FROM ticket ORDER BY id_t ";
+                                    $query="SELECT * FROM ticket inner join users on ticket.id_zloz=users.id ORDER BY id_t ";
                                     $result=mysql_query($query) or die (mysql_error());
                                     echo "<table align=\"center\" border=\"1\" cellpadding=\"2\" cellspacing=\"0\" >";
                                     echo "<tr >";		
@@ -104,7 +104,7 @@ Released   : 20100110
                                     echo "<td>"."Data Przyj"."</td>";
                                     echo "<td>"."Kategoria"."</td>";
                                     echo "<td>"."Data realizacji"."</td>";
-                                    echo "<td>"."Id ticket"."</td>";
+                                    echo "<td>"."Nazwisko"."</td>";
                                     echo "<td>"."IP"."</td>";
                                     echo "<td width=\"200px\">"."Info"."</td>";
                                     echo "</tr>";
@@ -116,7 +116,7 @@ Released   : 20100110
 					echo "<td>".$row->data_przy."</td>";
 					echo "<td>".$row->kategoria."</td>";
 					echo "<td>".$row->data_real."</td>";
-					echo "<td>".$row->id_zloz."</td>";
+					echo "<td>".$row->nazwisko."</td>";
 					echo "<td>".$row->ip."</td>";
 					echo "<td>".$row->info."</td>";
 					echo "</tr>";

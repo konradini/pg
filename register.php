@@ -31,6 +31,7 @@
                                             echo "<td>Login:<input type='text' name='login'></input></td>
                                                 <td>Has這:<input type='password' name='pass'></input></td>
                                                 <td><input type='hidden' value='$ref' name='ref'></input></td>
+			
                                                 <td><input type='submit' value='OK'></input></td>";
                                         }else{
                                             echo "<td>Zalogowano jako <b>" .$login. "</b></td>";
@@ -65,10 +66,10 @@
                         <li><a href="index.php">Home</a></li>
                         <li><a href="przeglad.php">Przegl康aj zg這szenia</a></li>
                         <li><a href="dodaj.php">Dodaj zg這szenie</a></li>
-                        <li><a href="zarzadzaj.php">Zarz康zaj zg這szeniami</a></li>
                         <?php
                             if(isset($login) && $klasa=='admin'){
                                 echo "<li><a href='register.php'>Dodaj u篡tkownika</a></li>";
+																echo "<li><a href='zarzadzaj.php'>Zarz康zaj zg這szeniami</a></li>";
                             }
                         ?>
                     </ul>
@@ -96,6 +97,8 @@
                         <option value="user">U篡tkownik</option>
                     </select>
                 </td></tr>
+								<tr><td><div style="color: black;">Nazwisko:</div></td>
+								<td><input type="text" name="nazwisko"></input></td></tr>
                 <tr><td><input type="submit" value="OK"></input></td></tr>
             </table>
         </form>

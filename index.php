@@ -1,15 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
 
-Name       : Wellness  
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20100110
-
--->
 <?php
     session_start();
      if(isset($_SESSION['login'])){
@@ -74,11 +64,11 @@ Released   : 20100110
                         <li><a href="index.php">Home</a></li>
                         <li><a href="przeglad.php">Przegl康aj zg這szenia</a></li>
                         <li><a href="dodaj.php">Dodaj zg這szenie</a></li>
-                        <li><a href="zarzadzaj.php">Zarz康zaj zg這szeniami</a></li>
-												
+                        
                         <?php
                             if(isset($login) && $klasa=='admin'){
                                 echo "<li><a href='register.php'>Dodaj u篡tkownika</a></li>";
+																echo "<li><a href='zarzadzaj.php'>Zarz康zaj zg這szeniami</a></li>";
                             }
                         ?>
                     </ul>
