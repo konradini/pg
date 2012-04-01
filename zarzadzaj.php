@@ -12,6 +12,7 @@ Released   : 20100110
 -->
 <?php
     session_start();
+    require_once 'auth.php';
      if(isset($_SESSION['login'])){
         $login=$_SESSION['login'];
         $klasa=$_SESSION['klasa'];
