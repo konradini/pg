@@ -92,8 +92,37 @@ Released   : 20100110
                         <div id="content">
                             <div style="color: black">
                             <?php
-                                if(!isset($login)){
+                                if(!isset($login) && $klasa=='admin')
                                     echo "Brak dostêpu! Zaloguj siê";
+																		else {
+                                    require_once 'connect.php';
+                                    $query="SELECT * FROM ticket inner join users on ticket.id_zloz=users.id ORDER BY id_t ";
+                                    $result=mysql_query($query) or die (mysql_error());
+                                    echo "<table align=\"center\" border=\"1\" cellpadding=\"2\" cellspacing=\"0\" >";
+                                    echo "<tr >";		
+                                    echo "<td>"."Id"."</td>";
+                                    echo "<td>"."Status"."</td>";
+                                    echo "<td>"."Data Przyj"."</td>";
+                                    echo "<td>"."Kategoria"."</td>";
+                                    echo "<td>"."Data realizacji"."</td>";
+                                    echo "<td>"."Nazwisko"."</td>";
+                                    echo "<td>"."IP"."</td>";
+                                    echo "<td width=\"200px\">"."Info"."</td>";
+                                    echo "</tr>";
+                                    echo'<br />';
+                                    while($row=mysql_fetch_object($result)) {
+                                        echo "<tr >";		
+					echo "<td>".$row->id_t."</td>";
+					echo "<td>".$row->status."</td>";
+					echo "<td>".$row->data_przy."</td>";
+					echo "<td>".$row->kategoria."</td>";
+					echo "<td>".$row->data_real."</td>";
+					echo "<td>".$row->nazwisko."</td>";
+					echo "<td>".$row->ip."</td>";
+					echo "<td>".$row->info."</td>";
+					echo "</tr>";
+                                    }
+																		
 																
                                 }
                             ?>
